@@ -5,10 +5,13 @@
 
 @import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800")
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
+@import url("//fonts.googleapis.com/css?family=Bitter:400,700,400italic")
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,900,900italic")
 
 // Colors
 $color_main = #3E3D3D
 $color_text = #515151
+$color_bg = #C086D3
 $color_bg_link_hover = #F4F4D4
 $color_button = #CAD2EE
 $color_border_button = #97A8DA
@@ -130,27 +133,22 @@ strong
 
 // Banner intro
 
-.octocat-banner
-    background #f5f6e0; /* Old browsers */
-    background -moz-linear-gradient(top, #f5f6e0 0%, #5d77d7 100%) /* FF3.6+ */
-    background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6e0), color-stop(100%,#5d77d7)) /* Chrome,Safari4+ */
-    background -webkit-linear-gradient(top, #f5f6e0 0%,#5d77d7 100%) /* Chrome10+,Safari5.1+ */
-    background -o-linear-gradient(top, #f5f6e0 0%,#5d77d7 100%) /* Opera 11.10+ */
-    background -ms-linear-gradient(top, #f5f6e0 0%,#5d77d7 100%) /* IE10+ */
-    background linear-gradient(to bottom, #f5f6e0 0%,#5d77d7 100%) /* W3C */
-    // filter progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6e0', endColorstr='#5d77d7',GradientType=0 ) /* IE6-9 */
+.scintilla-banner
+    background-color $color_bg
 
-    .octicon-octoface
-        margin 0.2em 0 0 0
-        color $color_dark_lilac
-        font-size 15em
-        opacity 0.2
-
-        @media screen and (max-width: 640px)
-            font-size 12em
+    background-image url("/img/bg-scintilla.jpg")
+    background-repeat no-repeat
+    background-position top
+    background-size auto
+    background-attachment fixed
 
     h1
-        margin 0.2em 0 0 0
+    h2
+        color white
+
+    h1
+        // margin 0.2em 0 0 0
+
         font-size 4.5em
         font-weight 800
 
@@ -159,7 +157,8 @@ strong
             font-size 1.8em
 
     h2
-        margin 0.3em 0 0 0
+        // margin 0.3em 0 0 0
+
         font-size 2em
         font-weight 300
 
@@ -205,9 +204,14 @@ strong
     .reason-why
         padding 0 1em
 
+        img
+            max-width 100%
+            display block
+
         h4
+            font-family 'Merriweather'
             font-size 1.1em
-            font-weight 700
+            font-weight 900
 
         p
             color $color_text
@@ -292,8 +296,6 @@ strong
         padding 0 1em
 
         .img-container
-            padding 0.8em 0
-            background-color lighten($color_border_button, 65%)
 
             img
                 margin 0 auto
@@ -437,31 +439,3 @@ strong
         color darken($color_light_grey, 35%)
 
         line-height 2em
-
-
-// Git Joke
-
-.git-joke
-    background-color $color_bg_terminal
-
-    p
-        margin 0
-        padding 9em 0
-
-        color white
-
-        font-size 1.2em
-        line-height 1em
-        font-weight 700
-
-        .repo
-            color $color_terminal_01
-
-        .git
-            color $color_terminal_02
-
-        .branch
-            color $color_terminal_03
-
-        @media screen and (max-width: 640px)
-            font-size 0.85em
